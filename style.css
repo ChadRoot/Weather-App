@@ -27,17 +27,17 @@ body {
   flex-direction: column;
 }
 
-.degree {
+.degree-section {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.degree span {
+.degree-section span {
   margin: 10px;
   font-size:  30px;
 }
 
-.degree h2 {
+.degree-section h2 {
   font-size: 40px;
 }

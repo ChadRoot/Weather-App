@@ -7,6 +7,7 @@
   <title>Taipei Weather App</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="app.js"></script>
+  <script src="skycons.js"></script>
 </head>
 <body>
   <div class="time"></div>
@@ -14,14 +15,16 @@
   <div class="location">
     <h1 class="location-timezone"></h1>
     <p id="user-coords"></p>
-    <p class="weather-icon"></p>
+    <canvas class="icon" width="64" height="64"></canvas>
   </div>
   <div class="temp">
-    <div class="degree">
+    <div class="degree-section">
       <h2 class="temp-degree"></h2>
       <span>F</span>
     </div>
-    <div class="temp-description"></div>
+    <div>
+      <h2 class="temp-description"></h2>
+    </div>
   </div>
 </body>
 </html>
