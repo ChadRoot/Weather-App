@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   let tempDescription = document.querySelector(".temp-description");
   let tempDegree = document.querySelector(".temp-degree");
   let locationTimezone = document.querySelector(".location-timezone");
-  let locationTime = document.querySelector(".current-time");
+  let locationTime = document.querySelector(".date")
   let tempSection = document.querySelector(".temp");
   const tempSpan = document.querySelector(".temp span");
 
@@ -26,7 +26,6 @@ window.addEventListener("load", () => {
         // Set DOM elements from API
         tempDegree.textContent = Math.round(temperature);
         tempDescription.textContent = summary;
-        locationTime.textContent = time; // need to convert from timestamp
         locationTimezone.textContent = data.timezone;
 
         // Set Icon
@@ -44,6 +43,10 @@ window.addEventListener("load", () => {
             tempDegree.textContent = Math.round(temperature);
           }
         });
+
+        // Set Time
+        locationTime.textContent = moment().format("dddd MMMM Do"); // need to convert from timestamp
+ 
       });
     });
   }
