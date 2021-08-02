@@ -15,7 +15,7 @@ body {
   font-size: 120%;
   color: white;
   margin: 0;
-  /* background-image: url('') */
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
 }
 
 .card {
@@ -81,4 +81,19 @@ h1.temp {
 .description {
   text-transform: capitalize;
   margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }
