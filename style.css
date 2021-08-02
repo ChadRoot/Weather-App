@@ -16,6 +16,7 @@ body {
   color: white;
   margin: 0;
   background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-size: cover;
 }
 
 .card {
