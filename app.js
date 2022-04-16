@@ -18,7 +18,39 @@ let weather = {
     const { speed } = data.wind;
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(".weather-icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+
+
+    document.getElementById('tempSwitch').onclick = function() {
+      this.classList.toggle('checked');
+    }
+
+    // function changeTemp() {
+      //   document.getElementsByClassName("temp").innerHtml = (Math.round(temp)) + "°C";
+      //   console.log((Math.round(temp)));
+      // }
+      // const ts = document.getElementById('tempSwitch');
+      // ts.addEventListener('click', () => changeTemp('(Math.round(temp)'));
+      
     document.querySelector(".temp").innerText = (Math.round(temp)) + "°C";
+
+    document.querySelector("#tempSwitch").addEventListener("click", function () {
+      let ct = (Math.round(temp)) + "°C";
+      let ft = (Math.round(temp * (9 / 5) + 32)) + "°F";
+      if (document.querySelector("#tempSwitch").classList != "checked") {
+        document.querySelector(".temp").innerText = ct;
+        console.log((Math.round(temp * (9 / 5) + 32)) + "°F");
+      } else {
+        document.querySelector(".temp").innerText = ft;
+        console.log((Math.round(temp)) + "°C");
+      }
+
+    })
+
+
+
+
+    
+    
     document.querySelector(".description").innerText = description;
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind Speed: " + (Math.round(speed)) + "km/hr";
@@ -43,6 +75,21 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
 weather.fetchWeather("Los Angeles");
 
 
+
+
+
+//         // Set Temp Conversion
+//         let celsius = (temperature - 32) * (5/9);
+//         // Change Temp C - F
+//         tempSection.addEventListener('click', () => {
+//           if(tempSpan.textContent === "F"){
+//             tempSpan.textContent = "C";
+//             tempDegree.textContent = Math.round(celsius);
+//           } else {
+//             tempSpan.textContent = "F";
+//             tempDegree.textContent = Math.round(temperature);
+//           }
+//         });
 
 
 
